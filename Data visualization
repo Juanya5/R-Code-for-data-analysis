@@ -1,0 +1,12 @@
+#Loading packages
+library(ggplot2)
+library(palmerpenguins)
+
+#visualizing data using FACETS
+ggplot(data=penguins,aes(x=flipper_length_mm,y=body_mass_g))+geom_point(aes(color=species))+facet_wrap(~species)
+labs(title="palmer penguins:Body mass vs flipper")
+#FACET Diamonds=Data
+ggplot(data=diamonds)+geom_bar(mapping=aes(x=color,fill=cut))+facet_wrap(~c Dataut)
+#fACET_grid
+ggplot(data=penguins)+geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+facet_grid(sex~species)
+labs(title="palmer penguins:Body mass vs flipper")
